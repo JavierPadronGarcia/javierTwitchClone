@@ -26,7 +26,7 @@ export default function Navbar() {
             <h5>CANALES QUE SIGO</h5>
             <p>Espectadores (descend.)</p>
             <FaRegHeart className={styles.heartIcon} />
-          </div>5
+          </div>
           <LuArrowUpDown className={styles.upDownIcon} />
         </div>
         <nav>
@@ -43,25 +43,14 @@ export default function Navbar() {
           <SmallChannel navbarState={navbarState} />
           <SmallChannel navbarState={navbarState} />
           <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
+          <div className={styles.moreLessButtons}>
+            <button className={`${styles.showMoreButton} deleteButtonStyles`}>
+              <span>Mostrar más</span>
+            </button>
+            <button className={`${styles.showLessButton} deleteButtonStyles`}>
+              <span>Mostrar menos</span>
+            </button>
+          </div>
         </nav>
       </section>
     </div>
