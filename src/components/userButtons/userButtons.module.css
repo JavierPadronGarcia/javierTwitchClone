@@ -55,9 +55,15 @@
 }
 
 .avatar {
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30px;
   aspect-ratio: 1;
-  background-color: grey;
-  padding: 1rem
+  padding: 1rem;
+}
+
+.avatar>img {
+  border-radius: 50%;
+  aspect-ratio: 1;
 }

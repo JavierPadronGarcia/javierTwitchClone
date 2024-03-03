@@ -4,6 +4,7 @@ import { AiOutlineInbox } from "react-icons/ai";
 import { BiMessageAlt, BiDiamond } from "react-icons/bi";
 import { RiBattery2ChargeLine } from "react-icons/ri";
 import SevenTvIcon from '@/icons/SevenTvIcon';
+import Image from 'next/image';
 
 export default function UserButtons() {
   return (
@@ -46,7 +47,9 @@ export default function UserButtons() {
       </div>
 
       <div className={styles.avatarContainer}>
-        <button className={`${styles.avatar} deleteButtonStyles`}></button>
+        <button className={`${styles.avatar} deleteButtonStyles`}>
+          <Image src='/userIcon.png' alt='userImage' width={30} height={30} />
+        </button>
       </div>
 
     </div>

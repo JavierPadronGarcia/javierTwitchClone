@@ -1,0 +1,61 @@
+.channel,
+.channelClosed {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+.channel:hover {
+  background-color: #35353b;
+}
+
+.channelClosed .channelDetails{
+  display: none;
+}
+
+.channelDetails {
+  display: flex;
+  width: 100%;
+}
+
+.channelData {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 5px;
+  width: 100%;
+}
+
+.channelName {
+  font-size: 14px;
+}
+
+.channelGame {
+  color: #90909a;
+}
+
+.channelViewers {
+  display: flex;
+  align-items: flex-start;
+}
+
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.redDot {
+  color: red;
+}
+
+.views {
+  font-size: 13px;
+}
