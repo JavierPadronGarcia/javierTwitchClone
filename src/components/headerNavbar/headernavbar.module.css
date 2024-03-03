@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  font-size: 18px;
+}
+
+.navbar>* {
+  padding: 20px;
+}
+
+.navbar>div>a:hover {
+  color: #bf94ff;
+}
+
+:where(.navbar>div>a, .navbar>button) {
+  cursor: pointer;
+}
+
+.dotsButton {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  background-color: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 15%;
+}
+
+.dotsButton:hover {
+  background-color: #35353b;
+}
+
+.dots {
+  font-size: 20px;
+}
