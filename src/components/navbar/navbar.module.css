@@ -91,15 +91,6 @@
   background-color: #35353b;
 }
 
-.moreLessButtons {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0.5rem;
-  color: var(--twitch-color)
-}
-
-.moreLessButtons>button:hover {
-  text-decoration: underline;
+.channelContainer {
+  position: relative;
 }

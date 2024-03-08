@@ -4,12 +4,22 @@ import { LuArrowUpDown } from "react-icons/lu";
 import SmallChannel from '../smallChannel/SmallChannel';
 import { FaRegHeart } from "react-icons/fa";
 import { useState } from 'react';
+import MoreAndLessButton from './MoreAndLessButton';
 
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(true);
+  const [numChannelsToShow, setNumChannelsToShow] = useState(12);
 
   const toggleNavbar = () => {
     setNavbarState(!navbarState);
+  }
+
+  const showMoreChannels = () => {
+    setNumChannelsToShow(numChannelsToShow + 5);
+  }
+
+  const showLessChannels = () => {
+    setNumChannelsToShow(Math.max(numChannelsToShow - 5, 12));
   }
 
   return (
@@ -30,27 +40,16 @@ export default function Navbar() {
           <LuArrowUpDown className={styles.upDownIcon} />
         </div>
         <nav>
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <SmallChannel navbarState={navbarState} />
-          <div className={styles.moreLessButtons}>
-            <button className={`${styles.showMoreButton} deleteButtonStyles`}>
-              <span>Mostrar más</span>
-            </button>
-            <button className={`${styles.showLessButton} deleteButtonStyles`}>
-              <span>Mostrar menos</span>
-            </button>
-          </div>
+          {[...Array(numChannelsToShow)].map((_, index) => (
+            <div className={styles.channelContainer}>
+              <SmallChannel key={index} navbarState={navbarState} />
+            </div>
+          ))}
+          <MoreAndLessButton
+            showMore={showMoreChannels}
+            showLess={showLessChannels}
+            numChannelsToShow={numChannelsToShow}
+          />
         </nav>
       </section>
     </div>

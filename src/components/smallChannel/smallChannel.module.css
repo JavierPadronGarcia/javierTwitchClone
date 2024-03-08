@@ -5,13 +5,14 @@
   cursor: pointer;
   padding: 5px 10px;
   font-size: 13px;
+  position: relative;
 }
 
 .channel:hover {
   background-color: #35353b;
 }
 
-.channelClosed .channelDetails{
+.channelClosed .channelDetails {
   display: none;
 }
 
