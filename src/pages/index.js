@@ -1,5 +1,10 @@
+import ImageCarrousel from '@/components/imageCarrousel/ImageCarrousel';
+import styles from './mainPage.module.css';
+
 export default function Home() {
   return (
-    <div>Contenido principal</div>
+    <div className={styles.mainPage}>
+      <ImageCarrousel />
+    </div>
   );
 }

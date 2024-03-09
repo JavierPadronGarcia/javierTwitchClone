@@ -1,0 +1,87 @@
+.imageCarrousel {
+  display: flex;
+  position: relative;
+  padding-block: 1rem;
+  min-height: 355px;
+}
+
+.leftMove,
+.rightMove {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  z-index: 5000;
+  user-select: none;
+}
+
+.leftMove {
+  left: 5%;
+}
+
+.rightMove {
+  right: 5%;
+}
+
+.leftMove>div,
+.rightMove>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 20%;
+  transition: background-color ease-in-out 0.1s;
+  cursor: pointer;
+}
+
+.leftMove>div:hover,
+.rightMove>div:hover {
+  background-color: #35353b;
+}
+
+.imagesContainer {
+  width: 100%;
+  min-height: 355px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.imagesContainer>* {
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+.active,
+.previous,
+.next {
+  display: flex;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+  top: 50%;
+}
+
+.active {
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.previous {
+  left: 25%;
+  z-index: 9;
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.next {
+  left: 75%;
+  z-index: 9;
+  transform: translate(-50%, -50%) scale(0.7);
+}

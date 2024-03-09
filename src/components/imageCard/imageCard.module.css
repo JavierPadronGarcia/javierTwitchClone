@@ -1,0 +1,85 @@
+.imageWrapper {
+  aspect-ratio: 2.5;
+  width: 750px;
+  display: grid;
+  grid-template-areas:
+    "image details";
+  grid-template-columns: 3fr 1fr;
+}
+
+.image {
+  grid-area: image;
+}
+
+.image>img {
+  width: 100%;
+}
+
+.details {
+  grid-area: details;
+  background-color: var(--navbar-background);
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  align-self: flex-start;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.info :not(.views) {
+  color: var(--twitch-color);
+  cursor: pointer;
+}
+
+.info :not(.views):hover {
+  text-decoration: underline;
+}
+
+.userName {
+  font-weight: 700;
+}
+
+.views {
+  margin-top: 2px;
+  font-size: 11px;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 11px;
+  color: #929292;
+  font-weight: 700;
+}
+
+.tag {
+  background-color: var(--background-buttons);
+  padding: 3px 7px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background-color: #4a4a52;
+}
+
+.description {
+  line-height: 1.7;
+}
