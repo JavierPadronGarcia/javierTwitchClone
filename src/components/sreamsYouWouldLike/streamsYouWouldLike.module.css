@@ -1,0 +1,24 @@
+.main {
+  height: 50%;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.title>a {
+  color: var(--twitch-color);
+}
+
+.title>a:hover {
+  text-decoration: underline;
+}
+
+.streams {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}

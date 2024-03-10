@@ -4,9 +4,3 @@
   overflow-y: scroll;
   background-color: var(--main-background);
 }
-
-.onlineChannels {
-  display: flex;
-  height: 50%;
-  position: relative;
-}
